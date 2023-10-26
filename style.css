@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s linear;
+    /* overflow: hidden; */
+}
+
+:root {
+    --bg-color: #e1e1e1;
+    --content-box: #fff;
+    --btn1: #3d3544;
+    --btn2: #00d0e4;
+    --text: #3d3544;
+    --text-blue: #00d0e4;
+    --text-gray: #a2a2a4;
+    --white: #fff;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+    /* background-color: none; */
+}
+
+.loremContainer {
+    width: 992px;
+    aspect-ratio: 16/9;
+
+    background-color: blue;
+}
+
+.loremBox {
+    height: 85%;
+    width: 100%;
+    background-color: var(--content-box);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loremContent {
+    height: 100%;
+    width: 50%;
+    /* background-color: chartreuse; */
+}
+
+.loremContent .logo{
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: var(--text);
+}
+
+.loremContent .logo span {
+    font-weight: 500;
+}
+
+.navBar {
+    width: 100%;
+}
+
+.navBar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navBar ul li {
+    list-style-type: none;
+}
+
+.navBar ul li a {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.navBar ul li:hover a {
+    color: var(--text-blue);
+}
+
+.loremContent .textSection {
+    margin: 40px 0px;
+}
+
+.textSection h1 {
+    font-size: 35px;
+    color: var(--text);
+}
+
+.textSection h1 span {
+    color: var(--text-blue);
+}
+
+.textSection p {
+    font-size: 10px;
+    margin: 15px 0px;
+    line-height: 2;
+    font-weight: 500;
+    color: var(--text-gray);
+}
+
+.buttons {
+    /* background-color: chartreuse; */
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.sbtn {
+    height: 30px;
+    width: 120px;
+    /* background-color: darkorchid; */
+}
+
+.sbtn a {
+    color: var(--white);
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.sbtn1 {
+    background-color: var(--btn2);
+    margin-right: 15px;
+}
+
+.sbtn2 {
+    background-color: var(--btn1);
+}
+
+.loremImg {
+    height: 100%;
+    width: 50%;
+    /* background-color: darkcyan; */
+}
+
+.loremInnerBox {
+    padding: 20px 40px;
+}
+
+.loremButtons {
+    height: 15.1%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 100%;
+    width: 50%;
+    padding: 15px 40px;
+    text-align: left;
+    background-color: chartreuse;
+}
+
+.btn1 a {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn1 a span {
+    font-weight: 400;
+}
+
+.btn1 {
+    background-color: var(--btn1);
+    position: relative;
+    display: flex;
+}
+
+.btn1::before {
+    position: absolute;
+    content: "";
+    display: block;
+    box-shadow: -20px 25px 8px rgba(0, 0, 0, 0.4);
+    /* transform: rotate(-3deg); */
+    transform: skewY(-3deg);
+    transform-origin: left;
+    height: 100%;
+    width: 94%;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.btn2 {
+    background-color: var(--btn2);
+    position: relative;
+}
+
+.btn2::before {
+    position: absolute;
+    content: "";
+    display: block;
+    box-shadow: 20px 25px 8px rgba(0, 0, 0, 0.4);
+    /* transform: rotate(-3deg); */
+    transform: skewY(3deg);
+    transform-origin: right;
+    height: 100%;
+    width:94%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+@media(max-width:992px) {
+    * {
+        overflow: scroll;
+    }
+}
+
+@media(max-width:810px) {
+    .navBar ul li a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:750px) {
+    .navBar ul li a {
+        font-size: 8px;
+    }
+}
+
+@media(max-width:688px) {
+    .textSection h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:650px) {
+    .loremContent {
+        width: 100%;
+    }
+
+    .loremImg {
+        width: 0%;
+        padding: 0px 0px;
+    }
+
+    .btn {
+        padding: 10px 0px 0px 40px;
+    }
+
+    .btn1 a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:520px) {
+    .btn1 a {
+        font-size: 9px;
+    }
+}
+
+@media(max-width:500px) {
+    .btn {
+        padding: 10px 0px 0px 20px;
+    }
+
+    .loremContent {
+        padding: 20px;
+    }
+}
